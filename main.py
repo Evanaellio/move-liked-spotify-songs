@@ -76,7 +76,7 @@ def main():
 
     print(*sorted_liked_tracks, sep="\n")
 
-    track_uris_to_move = [liked["track"]["uri"] for liked in all_liked_tracks]
+    track_uris_to_move = [liked["track"]["uri"] for liked in sorted_liked_tracks]
     wrapper.move_tracks_to_other_playlist(src_playlist, dst_playlist, track_uris_to_move)
 
 
